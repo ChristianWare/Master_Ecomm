@@ -3,7 +3,7 @@ import { NextPage } from "next";
 const IndevideualGamesPage: NextPage = (props) => {
   return (
     <div>
-      <h1>IndividualGamesPage</h1>
+      <h1>Individual Games Page</h1>
     </div>
   );
 };
