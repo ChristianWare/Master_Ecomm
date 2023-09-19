@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'master_ecomm',
 
-  projectId: '5imom0et',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID as string,
+  dataset: process.env.SANITY_STUDIO_DATASET as string,
 
   plugins: [deskTool(), visionTool()],
 
