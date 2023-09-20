@@ -4,8 +4,12 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import GameCard from "@/components/GameCard/GameCard";
+import { getCategories } from "@/libs/apis";
 
-export default function Home() {
+export default async function Home() {
+  const categories = await getCategories();
+  console.log(categories);
+
   return (
     <main>
       <Hero showLink />
@@ -21,26 +25,20 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className={styles.cardFlex}>
+      {/* <div className={styles.cardFlex}>
         <GameCard
           gameName={featuredGame.name}
           imageUrl={featuredGame.image}
           slug={featuredGame.slug}
           description={featuredGame.description}
         />
-        <GameCard
-          gameName={featuredGame.name}
-          imageUrl={featuredGame.image}
-          slug={featuredGame.slug}
-          description={featuredGame.description}
-        />
-        <GameCard
-          gameName={featuredGame.name}
-          imageUrl={featuredGame.image}
-          slug={featuredGame.slug}
-          description={featuredGame.description}
-        />
-      </div>
+      </div> */}
+      {categories.map((x) => (
+        <div key={x._id}>
+          <Image src={x.image} alt={x.name} width={300} height={300} className={styles.img} />
+          <p>{x.name}</p>
+        </div>
+      ))}
       <Footer />
     </main>
   );

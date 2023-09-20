@@ -1,7 +1,10 @@
 .cardFlex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
   padding: 2rem;
+}
+
+.img {
+  object-fit: cover;
 }
