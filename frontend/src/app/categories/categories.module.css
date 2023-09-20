@@ -1,0 +1,14 @@
+.container {
+    padding: 5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 5rem;
+}
+
+.img {
+  object-fit: cover;
+}

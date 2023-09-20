@@ -51,7 +51,7 @@ h5,
 h6 {
   font-family: var(--anton);
   color: var(--darkBlue);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h1 {
