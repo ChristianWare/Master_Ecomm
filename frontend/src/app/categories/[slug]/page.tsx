@@ -8,7 +8,7 @@ interface GameCategoryProps {
 }
 
 // This is the individual category/Slug Page
-export const revalidate = 60 // revalidate this page every 60 seconds
+export const revalidate = 30; // revalidate this page every 60 seconds
 const CategoriesSlugPage = async (props: { params: { slug: string } }) => {
   const {
     params: { slug },
@@ -22,8 +22,8 @@ const CategoriesSlugPage = async (props: { params: { slug: string } }) => {
       <h1>{slug} Category</h1>
       <p>A short subtitle that provides more contenxt about the game.</p>
       <section>
-        <h2>All {slug} games</h2>
-        <h3>Collection of games</h3>
+        <h2>All items from the {slug} category</h2>
+        {/* <h3>Collection of games</h3> */}
         {games.map((game) => (
           <GameCard
             key={game._id}
