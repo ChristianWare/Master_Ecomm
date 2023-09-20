@@ -17,6 +17,7 @@ export default async function Home() {
     <main>
       {/* <Hero showLink /> */}
       <h2>All Games</h2>
+      {/* Only some products will be listed here, the rest will be on the produc pages.  */}
       <div className={styles.cardFlex}>
         {games.map((game) => (
           <GameCard
