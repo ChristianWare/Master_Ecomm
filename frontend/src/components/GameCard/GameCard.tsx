@@ -2,7 +2,6 @@ import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./GameCard.module.css";
-import { createNoopTrackerScope } from "sanity";
 
 interface GameCardProps {
   gameName: string;
